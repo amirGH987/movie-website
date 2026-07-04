@@ -1,1 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    font-family:Tahoma,sans-serif;
+    background:#111;
+    color:#fff;
+}
+
+/* Header */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
+
+    background:#1a1a1a;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#e50914;
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-right:25px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#e50914;
+
+}
+
+/* Hero */
+
+.hero{
+
+    height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    color:#ccc;
+
+    margin-bottom:30px;
+
+}
+
+.hero button{
+
+    background:#e50914;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    font-size:18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.hero button:hover{
+
+    background:#c40812;
+
+}
