@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="movie-page">
+
+        <h1 id="title"></h1>
+
+        <p id="genre"></p>
+
+        <p id="rating"></p>
+
+        <p id="desc"></p>
+
+        <button>▶ تماشای تریلر</button>
+
+        <br><br>
+
+        <a href="index.html">⬅ برگشت</a>
+
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        let title = params.get("title");
+
+        document.getElementById("title").innerText = title;
+
+        let data = {
+            "Interstellar": {
+                genre: "علمی تخیلی",
+                rating: "⭐ 8.6",
+                desc: "سفر در فضا، زمان و عشق بین پدر و دختر"
+            },
+            "Joker": {
+                genre: "درام / جنایی",
+                rating: "⭐ 8.4",
+                desc: "داستان شکل‌گیری جوکر"
+            },
+            "TheBatman": {
+                genre: "اکشن / جنایی",
+                rating: "⭐ 8.0",
+                desc: "بتمن در گاتهام"
+            }
+        };
+
+        document.getElementById("genre").innerText = data[title]?.genre || "";
+        document.getElementById("rating").innerText = data[title]?.rating || "";
+        document.getElementById("desc").innerText = data[title]?.desc || "توضیح موجود نیست";
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,398 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+}
+
+h1{
+    color:#e50914;
+    font-size:60px;
+}
+/* Header */
+
+header{
+    background:#1a1a1a;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 50px;
+}
+
+.logo{
+    color:#e50914;
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-right:25px;
+    font-size:16px;
+    position:relative;
+    transition:.3s;
+}
+nav a::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#e50914;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:#e50914;
+}
+/* Hero */
+
+.hero{
+    height:90vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:40px;
+min-height:90vh;
+background:linear-gradient(to bottom,#111,#222);
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    color:#ccc;
+    margin-bottom:30px;
+}
+
+.hero button{
+
+    background:#e50914;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 40px;
+
+    font-size:18px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.hero button:hover{
+
+    background:#b20710;
+
+    transform:scale(1.05);
+
+}
+/* Movies */
+
+.movies{
+    padding:60px;
+}
+
+.movies h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.movie-list{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.movie-card{
+    width:220px;
+    background:#1b1b1b;
+    border-radius:15px;
+    overflow:hidden;
+
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+.movie-card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+.movie-card h3{
+    color:white;
+}
+.movie-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+.slider{
+    height:300px;
+    margin:40px;
+    border-radius:15px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#111,#2a2a2a);
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+
+    position:relative;
+    overflow:hidden;
+}
+
+.slide{
+    display:none;
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.slide.active{
+    display:block;
+    animation:fade 1s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:scale(0.9);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+#search{
+    padding:10px 15px;
+    border:none;
+    border-radius:20px;
+    outline:none;
+
+    background:#222;
+    color:white;
+}
+.movie-card{
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+}
+
+.movie-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.movie-card:hover img{
+    transform:scale(1.1);
+    filter:brightness(0.7);
+}
+
+.movie-card h3{
+    padding:15px;
+    text-align:center;
+    background:#1b1b1b;
+}
+.heart{
+    position:absolute;
+    top:10px;
+    left:10px;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.heart.active{
+    transform:scale(1.2);
+}
+@media (max-width: 768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    nav a{
+        margin-right:10px;
+        font-size:14px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .movies{
+        padding:20px;
+    }
+
+    .movie-list{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .movie-card{
+        width:90%;
+    }
+
+    .slider{
+    width:100%;
+    margin:20px auto;
+}
+
+}
+
+
+body{
+    font-family:Tahoma,sans-serif;
+    background:#111;
+    color:#fff;
+}
+
+/* بهتر شدن کلی انیمیشن‌ها */
+.movie-card,
+.hero button,
+nav a{
+    transition:.3s;
+}
+
+/* کمی فاصله حرفه‌ای‌تر کل سایت */
+section{
+    margin-bottom:40px;
+}
+
+/* اسکرول نرم‌تر */
+html{
+    scroll-behavior:smooth;
+}
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* موبایل */
+@media (max-width:768px){
+
+    .menu-toggle{
+        display:block;
+        color:white;
+    }
+
+    nav{
+        display:none;
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    nav.active{
+        display:flex;
+    }
+}
+.filters{
+    text-align:center;
+    margin:20px;
+}
+
+.filters button{
+    background:#222;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    margin:5px;
+    border-radius:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.filters button:hover{
+    background:#e50914;
+}
+.movie-list{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.movies{
+    padding:40px;
+    text-align:center;
+}
+
+.movie-card{
+    width:220px;
+    background:#1b1b1b;
+    border-radius:15px;
+    overflow:hidden;
+}
+.movie-page{
+    text-align:center;
+    padding:60px;
+    color:white;
+}
+
+.movie-page h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.movie-page p{
+    font-size:18px;
+    color:#ccc;
+    margin:10px 0;
+}
+
+.movie-page button{
+    background:#e50914;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+.movie-page button:hover{
+    background:#b00610;
+}

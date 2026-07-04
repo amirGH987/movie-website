@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieVerse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            🎬 MovieVerse
+        </div>
+<div class="menu-toggle">☰</div>
+        <nav>
+            <a href="#">خانه</a>
+            <a href="#">فیلم‌ها</a>
+            <a href="#">سریال‌ها</a>
+            <a href="#">درباره ما</a>
+        </nav>
+<input type="text" id="search" placeholder="جستجوی فیلم...">
+    </header>
+
+<section class="hero">
+
+    <h1>به MovieVerse خوش آمدید 🎬</h1>
+
+    <p>
+        جدیدترین فیلم‌ها، سریال‌ها و انیمه‌های دنیا را در یک جا دنبال کن.
+    </p>
+
+    <button>مشاهده فیلم‌ها</button>
+
+</section>
+<section class="slider">
+
+    <div class="slide active">
+        🎥 Interstellar
+    </div>
+
+    <div class="slide">
+        🃏 Joker
+    </div>
+
+    <div class="slide">
+        🦇 The Batman
+    </div>
+
+</section>
+<div class="filters">
+
+    <button onclick="filterMovies('all')">همه</button>
+    <button onclick="filterMovies('action')">اکشن</button>
+    <button onclick="filterMovies('drama')">درام</button>
+
+</div>
+
+<section class="movies">
+
+    <h2>🎬 فیلم‌های محبوب</h2>
+
+    <div class="movie-list">
+
+        <div class="movie-card">
+            <span class="heart">🤍</span>
+            <img src="images/interstellar.jpg">
+            <onclick="goToMovie('Interstellar')">
+            <h3>Interstellar</h3>
+        </div>
+
+        <div class="movie-card">
+            <span class="heart">🤍</span>
+            <img src="images/joker.jpg">
+            <onclick="goToMovie('Joker')"></onclick>
+            <h3>Joker</h3>
+        </div>
+
+        <div class="movie-card">
+            <span class="heart">🤍</span>
+            <onclick="goToMovie('TheBatman')"></onclick>
+            <img src="images/batman.jpg">
+            <h3>The Batman</h3>
+        </div>
+
+    </div>
+
+</section>
+</body>
+
+</html>
